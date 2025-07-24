@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio.Gissah - Architectural Consultant | Yahkoob P M</title>
+    <!-- Preload critical resources -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        as="style">
+
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Fallback for critical background images -->
+    <style>
+        .about-image img {
+            background-color: #f8f9fa;
+            min-height: 300px;
+        }
+
+        /* Prevent layout shift */
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Ensure background is always visible */
+        .background-media {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        [data-theme="dark"] .background-media {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <h2>Studio.Gissah</h2>
+                <p>Architectural Consultant</p>
+            </div>
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Video/Image -->
+    <div class="background-media">
+        <video class="background-video" autoplay muted loop>
+            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+        </video>
+        <div class="background-images">
+            <div class="bg-image bg-image-1 active"
+                style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+            <div class="bg-image bg-image-2"
+                style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+            <div class="bg-image bg-image-3"
+                style="background-image: url('https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+            <div class="bg-image bg-image-4"
+                style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+            <div class="bg-image bg-image-5"
+                style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+            <div class="bg-image bg-image-6"
+                style="background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+            <div class="bg-image bg-image-7"
+                style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+            <div class="bg-image bg-image-8"
+                style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+            </div>
+        </div>
+        <div class="background-overlay"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>Studio.Gissah</h3>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-controls">
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Designing Spaces,<br>Defining Futures</h1>
+            <p class="hero-subtitle">Creating architectural excellence through innovative design and sustainable
+                solutions</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-primary">Explore Projects</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About</h2>
+                    <p class="lead">I'm Yahkoob P M, founder of Studio.Gissah. With extensive experience in
+                        architectural design, I specialize in creating
+                        spaces that blend functionality with aesthetic excellence.</p>
+                    <p>My approach combines contemporary design principles with sustainable practices, ensuring each
+                        project not only meets client needs but also contributes positively to the environment and
+                        community. Based in Pathirippala, Palakkad, I serve clients across Kerala with innovative
+                        architectural solutions.</p>
+
+                    <div class="credentials">
+                        <h3>Credentials</h3>
+                        <ul>
+                            <li>RIBA Chartered Architect</li>
+                            <li>Council of Architecture, India</li>
+                            <li>LEED Accredited Professional</li>
+                            <li>M.Arch, School of Planning and Architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="Assets/Yahkoob_P_M.png" alt="Yahkoob P M - Architect" loading="eager" decoding="async"
+                        onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
+                        onload="this.style.opacity='1'" style="opacity: 0;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Portfolio Gallery</h2>
+            <p class="projects-subtitle">Explore our diverse range of architectural projects - Click on any image to
+                view the full gallery</p>
+
+            <!-- Project Filter Tabs -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="institutional">Institutional</button>
+                <button class="filter-btn" data-filter="interior">Interior Design</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Modern Villa Project -->
+                <div class="project-card" data-category="residential" data-project="modern-villa">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Modern Villa">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="modern-villa">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Residential</span>
+                        <h3>Mr. Adam Residence</h3>
+                        <p class="project-location">Palakkad, Kerala, 2024</p>
+                        <p>A contemporary residential project featuring modern design elements and functional planning.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Corporate Office Project -->
+                <div class="project-card" data-category="commercial" data-project="corporate-office">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Corporate Office">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="corporate-office">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Commercial</span>
+                        <h3>Tech Corporate Hub</h3>
+                        <p class="project-location">Bangalore, 2024</p>
+                        <p>A state-of-the-art office complex designed for innovation and collaboration.</p>
+                    </div>
+                </div>
+
+                <!-- Luxury Apartment Project -->
+                <div class="project-card" data-category="residential" data-project="luxury-apartment">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Luxury Apartment">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="luxury-apartment">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Residential</span>
+                        <h3>Luxury Penthouse</h3>
+                        <p class="project-location">Delhi, 2023</p>
+                        <p>An elegant penthouse apartment with contemporary design and premium finishes.</p>
+                    </div>
+                </div>
+
+                <!-- Cultural Center Project -->
+                <div class="project-card" data-category="institutional" data-project="cultural-center">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Cultural Center">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="cultural-center">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Institutional</span>
+                        <h3>Heritage Cultural Center</h3>
+                        <p class="project-location">Jaipur, 2023</p>
+                        <p>A cultural center that celebrates local heritage through modern architectural design.</p>
+                    </div>
+                </div>
+
+                <!-- Restaurant Interior Project -->
+                <div class="project-card" data-category="interior" data-project="restaurant-interior">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Restaurant Interior">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="restaurant-interior">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Interior Design</span>
+                        <h3>Fine Dining Restaurant</h3>
+                        <p class="project-location">Goa, 2024</p>
+                        <p>An upscale restaurant interior with warm ambiance and sophisticated design elements.</p>
+                    </div>
+                </div>
+
+                <!-- Shopping Mall Project -->
+                <div class="project-card" data-category="commercial" data-project="shopping-mall">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Shopping Mall">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="shopping-mall">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Commercial</span>
+                        <h3>Premium Shopping Complex</h3>
+                        <p class="project-location">Chennai, 2023</p>
+                        <p>A modern shopping complex with innovative retail spaces and entertainment zones.</p>
+                    </div>
+                </div>
+
+                <!-- Residential Complex Project -->
+                <div class="project-card" data-category="residential" data-project="residential-complex">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Residential Complex">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="residential-complex">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Residential</span>
+                        <h3>Green Living Complex</h3>
+                        <p class="project-location">Pune, 2024</p>
+                        <p>An eco-friendly residential complex with sustainable living solutions and green spaces.</p>
+                    </div>
+                </div>
+
+                <!-- Hotel Interior Project -->
+                <div class="project-card" data-category="interior" data-project="hotel-interior">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Hotel Interior">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="hotel-interior">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Interior Design</span>
+                        <h3>Boutique Hotel Lobby</h3>
+                        <p class="project-location">Udaipur, 2023</p>
+                        <p>A luxurious hotel lobby design combining traditional Rajasthani elements with modern comfort.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- University Campus Project -->
+                <div class="project-card" data-category="institutional" data-project="university-campus">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="University Campus">
+                        <div class="project-overlay">
+                            <div class="project-actions">
+                                <button class="view-gallery-btn" data-project="university-campus">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                    View Gallery
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-type">Institutional</span>
+                        <h3>Modern University Campus</h3>
+                        <p class="project-location">Hyderabad, 2024</p>
+                        <p>A contemporary university campus designed to foster learning and innovation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modal -->
+    <div class="portfolio-modal" id="portfolioModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+
+            <div class="modal-header">
+                <h3 id="modalTitle">Project Gallery</h3>
+                <p id="modalDescription">Project description will appear here</p>
+            </div>
+
+            <div class="modal-gallery">
+                <div class="gallery-main">
+                    <img id="mainGalleryImage" src="" alt="Project Image">
+                    <div class="gallery-nav">
+                        <button class="gallery-prev" id="galleryPrev">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="15 18 9 12 15 6" />
+                            </svg>
+                        </button>
+                        <button class="gallery-next" id="galleryNext">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="gallery-thumbnails" id="galleryThumbnails">
+                    <!-- Thumbnails will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="modal-info">
+                <div class="project-details">
+                    <div class="detail-item">
+                        <strong>Location:</strong>
+                        <span id="modalLocation">Location</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Year:</strong>
+                        <span id="modalYear">Year</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Type:</strong>
+                        <span id="modalType">Type</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Area:</strong>
+                        <span id="modalArea">Area</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M3 21h18" />
+                            <path d="M5 21V7l8-4v18" />
+                            <path d="M19 21V11l-6-4" />
+                        </svg>
+                    </div>
+                    <h3>Architectural Design</h3>
+                    <p>Complete architectural solutions from concept to construction documentation.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                    </div>
+                    <h3>Interior Design</h3>
+                    <p>Thoughtful interior spaces that reflect your lifestyle and functional needs.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                    </div>
+                    <h3>Renovation</h3>
+                    <p>Transforming existing spaces with innovative renovation and restoration solutions.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="16 18 22 12 16 6" />
+                            <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                    </div>
+                    <h3>3D Modeling</h3>
+                    <p>Advanced 3D visualization and virtual walkthroughs for better project understanding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted Partners Section -->
+    <section class="trusted-partners">
+        <div class="container">
+            <h3>Trusted by Leading Organizations</h3>
+            <div class="partners-logos">
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/120x60/2c3e50/ffffff?text=TATA+GROUP" alt="Tata Group"
+                        loading="lazy">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/120x60/e74c3c/ffffff?text=RELIANCE" alt="Reliance Industries"
+                        loading="lazy">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/120x60/3498db/ffffff?text=INFOSYS" alt="Infosys Limited"
+                        loading="lazy">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/120x60/e67e22/ffffff?text=MAHINDRA" alt="Mahindra Group"
+                        loading="lazy">
+                </div>
+                <div class="partner-logo">
+                    <img src="https://via.placeholder.com/120x60/27ae60/ffffff?text=GODREJ" alt="Godrej Group"
+                        loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-container">
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                                    <path
+                                        d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+                                </svg>
+                            </div>
+                            <p>"Priya's architectural vision transformed our corporate headquarters into a space that
+                                truly reflects our company values. Her attention to detail and innovative approach
+                                exceeded our expectations."</p>
+                            <div class="testimonial-author">
+                                <h4>Rajesh Kumar</h4>
+                                <span>CEO, Tech Innovations Ltd.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                                    <path
+                                        d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+                                </svg>
+                            </div>
+                            <p>"Working with Priya on our residential project was an absolute pleasure. She understood
+                                our lifestyle needs perfectly and created a home that's both beautiful and functional."
+                            </p>
+                            <div class="testimonial-author">
+                                <h4>Anita Sharma</h4>
+                                <span>Homeowner, Villa 21</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z" />
+                                    <path
+                                        d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z" />
+                                </svg>
+                            </div>
+                            <p>"The cultural center project showcased Priya's ability to blend modern design with
+                                traditional elements. The community absolutely loves the space she created for us."</p>
+                            <div class="testimonial-author">
+                                <h4>Dr. Meera Patel</h4>
+                                <span>Director, Cultural Heritage Foundation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-nav">
+                    <button class="testimonial-prev">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                    </button>
+                    <div class="testimonial-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                    <button class="testimonial-next">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's discuss your project</h3>
+                    <p>Ready to bring your architectural vision to life? Yahkoob P M and the Studio.Gissah team would
+                        love to hear about your project and explore
+                        how we can work together.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Email</strong>
+                            <p>yahkoob.py@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone</strong>
+                        <p>+91 7025131234</p>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Office</strong>
+                        <p>Studio.Gissah<br>Architectural Consultant<br>Pathirippala, Palakkad<br>Kerala - 678642</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="project" placeholder="Project Type">
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Tell me about your project" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Studio.Gissah Architectural Consultant - Ar. Yahkoob P M. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
